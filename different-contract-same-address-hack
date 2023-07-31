@@ -1,8 +1,5 @@
-=> Deploying multiple contracts at same address ?
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
+# Deploying multiple contracts at same address ?
+
 Borrow code from
 https://solidity-by-example.org/hacks/deploy-different-contracts-same-address/
 
