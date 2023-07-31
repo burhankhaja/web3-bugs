@@ -30,10 +30,10 @@ execute the selfdestruct function which is emergencyStop() in this code context
 Step 7: Execute the Kill function in **deploy** contract 
 Step 8: go back to **DeployerDeployer** contract && deploy **deploy** contract via deploy()
 Step 9: Notice the same address of **deployer** contract as it was before
-Step 10: execute deployAttack() in **deployer** contract to deployer attack contract on the
+Step 10: execute deployAttack() in **deployer** contract to deploye attack contract on the
 same address as the porposal contract was earlier
 
-Now why we went extra mile if the deployer contract got the same address as before:
+Now why we went extra mile if the deployer contract got the same address as it had before:
 because of the nonce thing 
 Sounds Confusing?? Just Do these steps...
 
