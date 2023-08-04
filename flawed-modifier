@@ -1,0 +1,23 @@
+Unsafe :=
+ modifier partnerCondition() {
+    if (msg.sender == partner) {
+      require(block.timestamp >= lockPeriodForPartner);
+      _;
+    } else {
+     _;
+    }
+  }
+
+  in this modifier it is checking if the lock period for partner has been over if it has it will trigger the function 
+  But it got itself in big trouble by defining else {_;} block
+  this will let others to do what partner was supposed to do
+
+  Safe (Disclaimer: Not Sure!):=
+  modifier partnerCondition() {
+    if (msg.sender == partner) {
+      require(block.timestamp >= lockPeriodForPartner);
+      _;
+    }
+  }
+
+  This Won't Allow the Otherwise conditions, because solidity compilers will stop running the modified function when the msg.sender doen't equal to partner
