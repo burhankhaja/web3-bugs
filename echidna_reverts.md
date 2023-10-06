@@ -11,6 +11,21 @@ function echidna_functionIsCallable() public returns (bool) {
 ```
 In this template, replace functionToTest with the name of the function you want to test. This function will return true if functionToTest executes successfully and false if it reverts.
 
+**in case any boolean isn't returned by calling fucntion**
+```solidity
+function echidna_functionIsCallable() public returns (bool) {
+    try this.functionToTest() {
+        return success;
+    } catch {
+        return false;
+    }
+}
+```
+
+
+
+
+
 To check whether a function reverts, you can write an assertion function that calls the function and checks its return value. If the function is supposed to return a boolean value, you can check whether it returns false when it's not supposed to. Here's a general template for such a function:
 ```solidity
 function echidna_functionReverts() public returns (bool) {
