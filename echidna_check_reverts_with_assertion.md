@@ -10,13 +10,6 @@ contract vuln {
 contract test {
     vuln target = new vuln();
 
-    // function echidna_functionIsCallable(uint256 amount) public returns (bool) {
-    //     try target.challenge(amount) {
-    //         return true;
-    //     } catch {
-    //         return false;
-    //     }
-    // }
     function test_assertion(uint256 amount) internal returns (bool) {
         try target.challenge(amount) {
             return true;
