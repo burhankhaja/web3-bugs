@@ -1,5 +1,19 @@
 Make sure test mode is not Assertion
 ==================================
+CASE 1
+=
+
+**in case any boolean isn't returned by calling fucntion**
+```solidity
+function echidna_functionIsCallable() public returns (bool) {
+    try this.functionToTest() {
+        return true;
+    } catch {
+        return false;
+    }
+}
+```
+
 To check whether a function is callable in Solidity using Echidna, you can write an assertion function that attempts to call the function and returns true if it succeeds and false if it fails. Here's a general template for such a function:
 
 ```solidity
@@ -13,18 +27,22 @@ function echidna_functionIsCallable() public returns (bool) {
 ```
 In this template, replace functionToTest with the name of the function you want to test. This function will return true if functionToTest executes successfully and false if it reverts.
 
+
+
+
+
+CASE 2
+=
 **in case any boolean isn't returned by calling fucntion**
 ```solidity
 function echidna_functionIsCallable() public returns (bool) {
     try this.functionToTest() {
-        return true;
-    } catch {
         return false;
+    } catch {
+        return true;
     }
 }
 ```
-
-
 
 
 
