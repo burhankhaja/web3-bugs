@@ -1,3 +1,5 @@
+Make sure test mode is not Assertion
+==================================
 To check whether a function is callable in Solidity using Echidna, you can write an assertion function that attempts to call the function and returns true if it succeeds and false if it fails. Here's a general template for such a function:
 
 ```solidity
