@@ -15,6 +15,16 @@ contract vuln {
 contract test {
     vuln target = new vuln();
 
+  function test_assertion(uint256 amount) public {
+        try target.challenge(amount) {
+            assert(true);
+        } catch {
+            assert(false);
+        }
+    }
+
+//MY OLD METHOD : THE DUMBEST WAY IN THE ENTIRE MILKYWAY
+/* 
     function test_assertion(uint256 amount) internal returns (bool) {
         try target.challenge(amount) {
             return true;
@@ -27,17 +37,12 @@ contract test {
         bool catcher = test_assertion(amount);
         assert(catcher == true);
     }
+*/
 }
 ```
 
 **EDIT: HOLY SHIT HOW DUMB I WAS, SAME CAN BE DONE WITH THIS**
 ```solidity
- function test_assertion(uint256 amount) public {
-        try target.challenge(amount) {
-            assert(true);
-        } catch {
-            assert(false);
-        }
-    }
+
 ```
 **hahaha**
