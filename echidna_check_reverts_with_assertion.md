@@ -2,18 +2,6 @@ When You Need to Check if Function Reverts But at the same time the function has
 In that case You can't run it without assertion mode
 =
 
-**EDIT: HOLY SHIT HOW DUMB I WAS, SAME CAN BE DONE WITH THIS**
-```solidity
- function test_assertion(uint256 amount) public {
-        try target.challenge(amount) {
-            assert(true);
-        } catch {
-            assert(false);
-        }
-    }
-```
-**hahaha**
-
 
 ```solidity
 pragma solidity 0.8.4;
@@ -41,3 +29,15 @@ contract test {
     }
 }
 ```
+
+**EDIT: HOLY SHIT HOW DUMB I WAS, SAME CAN BE DONE WITH THIS**
+```solidity
+ function test_assertion(uint256 amount) public {
+        try target.challenge(amount) {
+            assert(true);
+        } catch {
+            assert(false);
+        }
+    }
+```
+**hahaha**
