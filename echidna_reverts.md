@@ -17,7 +17,7 @@ In this template, replace functionToTest with the name of the function you want 
 ```solidity
 function echidna_functionIsCallable() public returns (bool) {
     try this.functionToTest() {
-        return success;
+        return true;
     } catch {
         return false;
     }
