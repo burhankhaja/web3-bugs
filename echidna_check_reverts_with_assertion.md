@@ -1,4 +1,4 @@
-When You Need to Check if Function Reverts But at the same time the function has arguments,
+When You Need to Check if Function Reverts But at the same time the function has arguments to fuzz,
 In that case You can't run it without assertion mode
 =
 
